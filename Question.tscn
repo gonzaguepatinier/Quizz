@@ -1,0 +1,18 @@
+[gd_scene format=2]
+
+[node name="Question" type="Node2D"]
+position = Vector2( 0, -2 )
+
+[node name="Question Text" type="RichTextLabel" parent="."]
+margin_left = 158.0
+margin_top = 23.0
+margin_right = 268.0
+margin_bottom = 59.0
+text = "Question"
+
+[node name="ANS A" type="Button" parent="."]
+margin_left = 46.0
+margin_top = 60.0
+margin_right = 162.0
+margin_bottom = 95.0
+text = "Answer A"
