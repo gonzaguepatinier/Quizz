@@ -13,6 +13,13 @@ margin_right = 182.0
 margin_bottom = 57.0
 text = "Question"
 
+[node name="QuestionNumber" type="RichTextLabel" parent="."]
+margin_left = 544.0
+margin_top = 17.0
+margin_right = 654.0
+margin_bottom = 53.0
+text = "Question Number"
+
 [node name="ANS A" type="Button" parent="."]
 margin_left = 65.0
 margin_top = 74.0
@@ -40,3 +47,12 @@ margin_top = 229.0
 margin_right = 184.0
 margin_bottom = 264.0
 text = "Answer D"
+
+[node name="Next Q" type="Button" parent="."]
+margin_left = 266.0
+margin_top = 225.0
+margin_right = 382.0
+margin_bottom = 260.0
+text = "Next Question"
+
+[connection signal="pressed" from="Next Q" to="." method="_on_Next_Q_pressed"]
