@@ -5,15 +5,28 @@ var num = 0
 var q_data = [
 	{
 		 "Q": "What is the meaning of life?",
-		"A": ["Life is good","Help!","There is Hope","What?"]
+		"A": ["Life is good","Help!","There is Hope","What?"],
+		"CA":1
 	 },
 	{
 		"Q": "What time is it?",
-		"A": ["tiger time","Now?","where?","10:00"]
+		"A": ["tiger time","Now?","where?","10:00"],
+		"CA":1
+	},
+	{
+		"Q": "What language you speak?",
+		"A": ["French","Russian","Italian","Alien"],
+		"CA":1
+	},
+	{
+		"Q": "What car do you drive?",
+		"A": ["Audi","BMW","Toyota","Honda"],
+		"CA":4
 	},
 	{
 		"Q": "Where do you live?",
-		"A": ["in space","Bangkok","New York","in a cave"]
+		"A": ["in space","Bangkok","New York","in a cave"],
+		"CA":2
 	}
 ]  
 
@@ -68,7 +81,7 @@ func _ready():
 
 func _on_Next_Q_pressed():
 	num = num + 1
-	if num == 3:
+	if num == q_data.size():
 		num = 0
 	
 	_loadquestion(num)
