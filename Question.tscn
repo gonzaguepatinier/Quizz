@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Question.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
 
 [node name="Question" type="Node2D"]
 position = Vector2( 0, -2 )
@@ -25,6 +27,7 @@ margin_left = 65.0
 margin_top = 74.0
 margin_right = 181.0
 margin_bottom = 109.0
+theme = SubResource( 1 )
 text = "Answer A"
 
 [node name="ANS B" type="Button" parent="."]
@@ -55,4 +58,19 @@ margin_right = 382.0
 margin_bottom = 260.0
 text = "Next Question"
 
+[node name="Save" type="Button" parent="."]
+margin_left = 417.0
+margin_top = 223.0
+margin_right = 523.0
+margin_bottom = 254.0
+text = "SAVE"
+
+[node name="Load" type="Button" parent="."]
+margin_left = 419.0
+margin_top = 182.0
+margin_right = 521.0
+margin_bottom = 209.0
+text = "Load"
+
 [connection signal="pressed" from="Next Q" to="." method="_on_Next_Q_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
