@@ -58,7 +58,7 @@ func _writejson():
 
 func loadFromJson():
 	var file = File.new()
-	if file.open("user://user_data.json", File.READ) == OK:
+	if file.open("res://user_data.json", File.READ) == OK:
 		var jsonStr = file.get_as_text()
 		file.close()
 		
