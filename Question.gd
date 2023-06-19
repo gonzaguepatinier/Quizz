@@ -2,7 +2,9 @@ extends Node2D
 
 var num = 0
 
-var q_data = [
+var q_data = []
+
+var Old_data = [
 	{
 		 "Q": "What is the meaning of life?",
 		"A": ["Life is good","Help!","There is Hope","What?"],
@@ -33,6 +35,48 @@ var q_data = [
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+
+func _writejson_old():
+	var file = File.new()
+	if file.open("user://saved_game.sav", File.WRITE) != 0:
+		print("Error opening file")
+		return
+
+	# Save the dictionary as JSON (or whatever you want, JSON is convenient here because it's built-in)
+	file.store_line(q_data.to_json())
+	file.close()
+
+func _writejson():
+	var jsonStr = JSON.print(q_data)
+	var file = File.new()
+	if file.open("user://user_data.json", File.WRITE) == OK:
+		file.store_string(jsonStr)
+		file.close()
+		print("Data exported to JSON successfully.")
+	else:
+		print("Failed to open file for writing.")
+
+func loadFromJson():
+	var file = File.new()
+	if file.open("res://user_data.json", File.READ) == OK:
+		var jsonStr = file.get_as_text()
+		file.close()
+		
+		var jsonData = JSON.parse(jsonStr)
+		q_data = jsonData.result
+		# q_data = jsonData
+		if jsonData != null:
+			# Data has been loaded successfully
+			processLoadedData(jsonData)
+		else:
+			print("Failed to parse JSON data.")
+	else:
+		print("Failed to open file for reading.")
+
+func processLoadedData(data):
+	# Process the loaded data here
+	print("Loaded data:", data)
+
 
 func _loadquestion(value):
 	var n = value
@@ -69,6 +113,8 @@ func _loadquestion(value):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	num = 0
+	loadFromJson()
+	
 	_loadquestion(num)
 	
 #	pass # Replace with function body.
@@ -86,3 +132,8 @@ func _on_Next_Q_pressed():
 	
 	_loadquestion(num)
 	#pass # Replace with function body.
+
+
+func _on_Save_pressed():
+	_writejson()
+	pass # Replace with function body.
