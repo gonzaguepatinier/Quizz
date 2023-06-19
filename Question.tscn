@@ -9,53 +9,57 @@ position = Vector2( 0, -2 )
 script = ExtResource( 1 )
 
 [node name="QuestionText" type="RichTextLabel" parent="."]
-margin_left = 72.0
+margin_left = 189.0
 margin_top = 21.0
+
 margin_right = 386.0
 margin_bottom = 57.0
+
 text = "Question"
 
 [node name="QuestionNumber" type="RichTextLabel" parent="."]
-margin_left = 477.0
-margin_top = 17.0
-margin_right = 654.0
-margin_bottom = 38.0
+margin_left = 82.0
+margin_top = 33.0
+margin_right = 158.0
+margin_bottom = 73.0
 text = "Question Number"
 
 [node name="ANS A" type="Button" parent="."]
+
 margin_left = 65.0
 margin_top = 74.0
 margin_right = 181.0
 margin_bottom = 109.0
 theme = SubResource( 1 )
+
 text = "Answer A"
 
 [node name="ANS B" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 127.0
-margin_right = 180.0
-margin_bottom = 162.0
+margin_left = 246.0
+margin_top = 110.0
+margin_right = 362.0
+margin_bottom = 145.0
 text = "Answer B"
 
 [node name="ANS C" type="Button" parent="."]
-margin_left = 68.0
+margin_left = 63.0
 margin_top = 176.0
-margin_right = 184.0
+margin_right = 179.0
 margin_bottom = 211.0
 text = "Answer C"
 
 [node name="ANS D" type="Button" parent="."]
-margin_left = 68.0
-margin_top = 229.0
-margin_right = 184.0
-margin_bottom = 264.0
+margin_left = 246.0
+margin_top = 180.0
+margin_right = 362.0
+margin_bottom = 215.0
 text = "Answer D"
 
 [node name="Next Q" type="Button" parent="."]
-margin_left = 266.0
-margin_top = 225.0
-margin_right = 382.0
-margin_bottom = 260.0
+margin_left = 423.0
+margin_top = 16.0
+margin_right = 533.0
+margin_bottom = 94.0
 text = "Next Question"
 
 [node name="Save" type="Button" parent="."]
