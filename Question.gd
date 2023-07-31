@@ -92,19 +92,19 @@ func _loadquestion(value):
 	var NQ = q_data[n].Q
 	QT.set("text",NQ)
 	
-	var AT = get_node("ANS A")
+	var AT = get_node("ANSGRID/ANS A")
 	var AQ = q_data[n].A[0]
 	AT.set("text",AQ)
 	
-	AT = get_node("ANS B")
+	AT = get_node("ANSGRID/ANS B")
 	AQ = q_data[n].A[1]
 	AT.set("text",AQ)
 	
-	AT = get_node("ANS C")
+	AT = get_node("ANSGRID/ANS C")
 	AQ = q_data[n].A[2]
 	AT.set("text",AQ)
 	
-	AT = get_node("ANS D")
+	AT = get_node("ANSGRID/ANS D")
 	AQ = q_data[n].A[3]
 	AT.set("text",AQ)
 
@@ -124,11 +124,16 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
+func _on_Prev_Q_pressed():
+	if (num > 0):
+		num = num - 1
+	
+	_loadquestion(num)
+		
 func _on_Next_Q_pressed():
 	num = num + 1
 	if num == q_data.size():
-		num = 0
+		num = num -1
 	
 	_loadquestion(num)
 	#pass # Replace with function body.

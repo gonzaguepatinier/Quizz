@@ -9,54 +9,34 @@ position = Vector2( 0, -2 )
 script = ExtResource( 1 )
 
 [node name="QuestionText" type="RichTextLabel" parent="."]
-margin_left = 189.0
+margin_left = 64.0
 margin_top = 22.0
-margin_right = 386.0
+margin_right = 261.0
 margin_bottom = 58.0
 text = "Question"
 
 [node name="QuestionNumber" type="RichTextLabel" parent="."]
-margin_left = 78.0
-margin_top = 20.0
-margin_right = 154.0
-margin_bottom = 60.0
+margin_left = 345.0
+margin_top = 16.0
+margin_right = 421.0
+margin_bottom = 56.0
 text = "Question Number"
 
-[node name="ANS A" type="Button" parent="."]
-margin_left = 63.0
-margin_top = 107.0
-margin_right = 179.0
-margin_bottom = 142.0
-theme = SubResource( 1 )
-text = "Answer A"
-
-[node name="ANS B" type="Button" parent="."]
-margin_left = 246.0
-margin_top = 114.0
-margin_right = 362.0
-margin_bottom = 149.0
-text = "Answer B"
-
-[node name="ANS C" type="Button" parent="."]
-margin_left = 64.0
-margin_top = 177.0
-margin_right = 180.0
-margin_bottom = 212.0
-text = "Answer C"
-
-[node name="ANS D" type="Button" parent="."]
-margin_left = 246.0
-margin_top = 180.0
-margin_right = 362.0
-margin_bottom = 215.0
-text = "Answer D"
-
 [node name="Next Q" type="Button" parent="."]
-margin_left = 423.0
-margin_top = 16.0
-margin_right = 533.0
-margin_bottom = 94.0
+margin_left = 246.0
+margin_top = 275.0
+margin_right = 356.0
+margin_bottom = 353.0
+rect_pivot_offset = Vector2( 45, 39 )
 text = "Next Question"
+
+[node name="Prev Q" type="Button" parent="."]
+margin_left = 86.0
+margin_top = 278.0
+margin_right = 196.0
+margin_bottom = 356.0
+rect_pivot_offset = Vector2( 45, 39 )
+text = "Previous Question"
 
 [node name="Save" type="Button" parent="."]
 margin_left = 417.0
@@ -72,5 +52,48 @@ margin_right = 521.0
 margin_bottom = 209.0
 text = "Load"
 
+[node name="ANSGRID" type="GridContainer" parent="."]
+margin_left = 49.0
+margin_top = 93.0
+margin_right = 380.0
+margin_bottom = 257.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="ANS A" type="Button" parent="ANSGRID"]
+margin_right = 164.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 1 )
+text = "Answer A"
+
+[node name="ANS B" type="Button" parent="ANSGRID"]
+margin_left = 168.0
+margin_right = 331.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer B"
+
+[node name="ANS C" type="Button" parent="ANSGRID"]
+margin_top = 84.0
+margin_right = 164.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer C"
+
+[node name="ANS D" type="Button" parent="ANSGRID"]
+margin_left = 168.0
+margin_top = 84.0
+margin_right = 331.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer D"
+
 [connection signal="pressed" from="Next Q" to="." method="_on_Next_Q_pressed"]
+[connection signal="pressed" from="Prev Q" to="." method="_on_Prev_Q_pressed"]
 [connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
