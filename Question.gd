@@ -3,6 +3,7 @@ extends Node2D
 var num = 0
 
 var q_data = []
+var a_data = []
 
 var Old_data = [
 	{
@@ -72,6 +73,8 @@ func loadFromJson():
 			print("Failed to parse JSON data.")
 	else:
 		print("Failed to open file for reading.")
+	for i in range(q_data.size()):
+			a_data.append("?")
 
 func processLoadedData(data):
 	# Process the loaded data here
@@ -82,6 +85,7 @@ func _loadquestion(value):
 	var n = value
 	
 	var QN = get_node("QuestionNumber")
+	var ANS = get_node("Answer")
 	var MaxQString = str(q_data.size())
 	var QNString = str(n+1)
 	
@@ -91,6 +95,8 @@ func _loadquestion(value):
 	QT.set("text","Test Question")
 	var NQ = q_data[n].Q
 	QT.set("text",NQ)
+	
+	ANS.set("text",a_data[n])
 	
 	var AT = get_node("ANSGRID/ANS A")
 	var AQ = q_data[n].A[0]
@@ -141,4 +147,44 @@ func _on_Next_Q_pressed():
 
 func _on_Save_pressed():
 	_writejson()
+	pass # Replace with function body.
+
+
+func _on_ANS_A_pressed():
+	var text_value = "A"
+	a_data[num] = text_value
+	var ANS = get_node("Answer")
+	ANS.set("text",a_data[num])
+	pass # Replace with function body.
+
+
+func _on_ANS_B_pressed():
+	var text_value = "B"
+	a_data[num] = text_value
+	var ANS = get_node("Answer")
+	ANS.set("text",a_data[num])
+	pass # Replace with function body.
+
+
+
+func _on_ANS_C_pressed():
+	var text_value = "C"
+	a_data[num] = text_value
+	var ANS = get_node("Answer")
+	ANS.set("text",a_data[num])
+	pass # Replace with function body.
+
+
+func _on_ANS_D_pressed():
+	var text_value = "D"
+	a_data[num] = text_value
+	var ANS = get_node("Answer")
+	ANS.set("text",a_data[num])
+	pass # Replace with function body.
+
+
+func _on_Submit_pressed():
+	# check all questions answered
+	# Check Responses to Check
+	# Update Score
 	pass # Replace with function body.

@@ -9,47 +9,63 @@ position = Vector2( 0, -2 )
 script = ExtResource( 1 )
 
 [node name="QuestionText" type="RichTextLabel" parent="."]
-margin_left = 64.0
-margin_top = 22.0
-margin_right = 261.0
-margin_bottom = 58.0
+margin_left = 176.0
+margin_top = 18.0
+margin_right = 373.0
+margin_bottom = 54.0
 text = "Question"
 
 [node name="QuestionNumber" type="RichTextLabel" parent="."]
-margin_left = 345.0
-margin_top = 16.0
-margin_right = 421.0
-margin_bottom = 56.0
+margin_left = 189.0
+margin_top = 296.0
+margin_right = 265.0
+margin_bottom = 336.0
 text = "Question Number"
 
+[node name="Answer" type="RichTextLabel" parent="."]
+margin_left = 182.0
+margin_top = 45.0
+margin_right = 258.0
+margin_bottom = 85.0
+text = "Answer"
+
 [node name="Next Q" type="Button" parent="."]
-margin_left = 246.0
-margin_top = 275.0
-margin_right = 356.0
-margin_bottom = 353.0
+margin_left = 269.0
+margin_top = 279.0
+margin_right = 379.0
+margin_bottom = 357.0
 rect_pivot_offset = Vector2( 45, 39 )
 text = "Next Question"
 
+[node name="Submit" type="Button" parent="."]
+margin_left = 477.0
+margin_top = 277.0
+margin_right = 587.0
+margin_bottom = 355.0
+rect_pivot_offset = Vector2( 45, 39 )
+disabled = true
+text = "Submit"
+
 [node name="Prev Q" type="Button" parent="."]
-margin_left = 86.0
-margin_top = 278.0
-margin_right = 196.0
-margin_bottom = 356.0
+margin_left = 48.0
+margin_top = 274.0
+margin_right = 178.0
+margin_bottom = 352.0
 rect_pivot_offset = Vector2( 45, 39 )
 text = "Previous Question"
 
 [node name="Save" type="Button" parent="."]
-margin_left = 417.0
-margin_top = 223.0
-margin_right = 523.0
-margin_bottom = 254.0
+margin_left = 480.0
+margin_top = 178.0
+margin_right = 586.0
+margin_bottom = 209.0
 text = "SAVE"
 
 [node name="Load" type="Button" parent="."]
-margin_left = 419.0
-margin_top = 182.0
-margin_right = 521.0
-margin_bottom = 209.0
+margin_left = 482.0
+margin_top = 137.0
+margin_right = 584.0
+margin_bottom = 164.0
 text = "Load"
 
 [node name="ANSGRID" type="GridContainer" parent="."]
@@ -59,18 +75,17 @@ margin_right = 380.0
 margin_bottom = 257.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-columns = 2
 
 [node name="ANS A" type="Button" parent="ANSGRID"]
-margin_right = 164.0
-margin_bottom = 80.0
+margin_right = 331.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 1 )
 text = "Answer A"
 
 [node name="ANS B" type="Button" parent="ANSGRID"]
-margin_left = 168.0
+margin_top = 42.0
 margin_right = 331.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
@@ -79,21 +94,69 @@ text = "Answer B"
 
 [node name="ANS C" type="Button" parent="ANSGRID"]
 margin_top = 84.0
-margin_right = 164.0
-margin_bottom = 164.0
+margin_right = 331.0
+margin_bottom = 122.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Answer C"
 
 [node name="ANS D" type="Button" parent="ANSGRID"]
-margin_left = 168.0
-margin_top = 84.0
+margin_top = 126.0
 margin_right = 331.0
 margin_bottom = 164.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Answer D"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 19.0
+margin_top = 105.0
+margin_right = 47.0
+margin_bottom = 119.0
+text = "A"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 17.0
+margin_top = 187.0
+margin_right = 45.0
+margin_bottom = 201.0
+text = "C"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 20.0
+margin_top = 144.0
+margin_right = 48.0
+margin_bottom = 158.0
+text = "B"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 20.0
+margin_top = 229.0
+margin_right = 48.0
+margin_bottom = 243.0
+text = "D"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 58.0
+margin_top = 16.0
+margin_right = 98.0
+margin_bottom = 30.0
+rect_scale = Vector2( 1.23072, 1.36724 )
+text = "Question: "
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 59.0
+margin_top = 44.0
+margin_right = 126.0
+margin_bottom = 58.0
+rect_scale = Vector2( 1.23644, 1.40269 )
+text = "Answer:"
+
 [connection signal="pressed" from="Next Q" to="." method="_on_Next_Q_pressed"]
+[connection signal="pressed" from="Submit" to="." method="_on_Submit_pressed"]
 [connection signal="pressed" from="Prev Q" to="." method="_on_Prev_Q_pressed"]
 [connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="ANSGRID/ANS A" to="." method="_on_ANS_A_pressed"]
+[connection signal="pressed" from="ANSGRID/ANS B" to="." method="_on_ANS_B_pressed"]
+[connection signal="pressed" from="ANSGRID/ANS C" to="." method="_on_ANS_C_pressed"]
+[connection signal="pressed" from="ANSGRID/ANS D" to="." method="_on_ANS_D_pressed"]

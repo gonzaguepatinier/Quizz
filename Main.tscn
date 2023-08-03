@@ -11,19 +11,25 @@ margin_bottom = 265.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
 margin_right = 379.0
-margin_bottom = 130.0
+margin_bottom = 85.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-bbcode_text = "[center] Quizz Game[/center]
+bbcode_text = "[center] Quizz Game[/center]"
+text = " Quizz Game"
 
-Click below to start the quizz."
-text = " Quizz Game
-
-Click below to start the quizz."
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 89.0
+margin_right = 379.0
+margin_bottom = 175.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "Click below to start the quizz."
+text = "Click below to start the quizz."
 
 [node name="Start" type="Button" parent="VBoxContainer"]
-margin_top = 134.0
+margin_top = 179.0
 margin_right = 379.0
 margin_bottom = 265.0
 size_flags_horizontal = 3
