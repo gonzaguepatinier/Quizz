@@ -29,6 +29,13 @@ margin_right = 258.0
 margin_bottom = 85.0
 text = "Answer"
 
+[node name="Correct_Answer" type="RichTextLabel" parent="."]
+margin_left = 184.0
+margin_top = 69.0
+margin_right = 260.0
+margin_bottom = 109.0
+text = "Correct Answer"
+
 [node name="Next Q" type="Button" parent="."]
 margin_left = 269.0
 margin_top = 279.0

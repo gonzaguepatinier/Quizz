@@ -1,6 +1,7 @@
 extends Node2D
 
 var num = 0
+var condition_met = false
 
 var q_data = []
 var a_data = []
@@ -73,7 +74,7 @@ func loadFromJson():
 			print("Failed to parse JSON data.")
 	else:
 		print("Failed to open file for reading.")
-	for i in range(q_data.size()):
+	for _i in range(q_data.size()):
 			a_data.append("?")
 
 func processLoadedData(data):
@@ -86,6 +87,8 @@ func _loadquestion(value):
 	
 	var QN = get_node("QuestionNumber")
 	var ANS = get_node("Answer")
+	var COR_ANS = get_node("Correct_Answer")
+	
 	var MaxQString = str(q_data.size())
 	var QNString = str(n+1)
 	
@@ -95,6 +98,9 @@ func _loadquestion(value):
 	QT.set("text","Test Question")
 	var NQ = q_data[n].Q
 	QT.set("text",NQ)
+
+	var CA = q_data[n].CA
+	COR_ANS.set("text",CA)
 	
 	ANS.set("text",a_data[n])
 	
@@ -120,7 +126,7 @@ func _loadquestion(value):
 func _ready():
 	num = 0
 	loadFromJson()
-	
+	periodic_check()
 	_loadquestion(num)
 	
 #	pass # Replace with function body.
@@ -185,6 +191,34 @@ func _on_ANS_D_pressed():
 
 func _on_Submit_pressed():
 	# check all questions answered
+	check_answers()
 	# Check Responses to Check
 	# Update Score
+	# change to final scene
 	pass # Replace with function body.
+
+func check_answers():
+	for i in range(q_data.size()):
+		print (q_data[i].CA, a_data[i])
+		#compare asnwer to value
+	pass
+	
+	
+func periodic_check():
+	var my_node = get_node("Submit")
+	while true:  # Infinite loop to continuously check the condition	
+		# Check if all questions have been answered.
+		condition_met = true
+		for i in range(q_data.size()):
+			if a_data[i] == "?":
+				condition_met = false
+		if condition_met:
+		# Perform the desired action when the condition is met
+			print("Condition is met!")
+			my_node.disabled = false
+			
+		else:
+			print("Condition is not met!")
+	   
+	# Add a delay of 2 seconds (adjust this value to your desired time interval)
+		yield(get_tree().create_timer(2.0), "timeout")
