@@ -6,6 +6,9 @@ extends Node
 # var b = "text"
 
 var score = -1
+var total_question: int = 0
+var good_answer: int = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

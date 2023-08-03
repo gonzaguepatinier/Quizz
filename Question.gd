@@ -1,5 +1,9 @@
 extends Node2D
 
+var global_script = preload("res://Global.gd")
+
+# var GS = get_node("res://Global")
+
 var num = 0
 var condition_met = false
 
@@ -198,9 +202,17 @@ func _on_Submit_pressed():
 	pass # Replace with function body.
 
 func check_answers():
+	GS.good_answer = 0
 	for i in range(q_data.size()):
 		print (q_data[i].CA, a_data[i])
-		#compare asnwer to value
+		if (q_data[i].CA == a_data[i]):
+				GS.good_answer = GS.good_answer + 1
+		
+	# global_script.total_question = q_data.size()
+	GS.total_question = q_data.size()
+	print ("Number of Question: ", GS.total_question)
+	print ("Good Answer: ", GS.good_answer)
+	#compare asnwer to value
 	pass
 	
 	
