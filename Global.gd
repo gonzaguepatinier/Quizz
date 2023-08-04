@@ -9,6 +9,8 @@ var score = -1
 var total_question: int = 0
 var good_answer: int = 0
 
+var quizz_file = "res://user_data.json"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
