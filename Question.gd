@@ -196,6 +196,7 @@ func _on_ANS_D_pressed():
 func _on_Submit_pressed():
 	# check all questions answered
 	check_answers()
+	get_tree().change_scene("res://Score.tscn")
 	# Check Responses to Check
 	# Update Score
 	# change to final scene
