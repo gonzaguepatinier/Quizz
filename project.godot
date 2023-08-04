@@ -14,6 +14,10 @@ config/name="Quizz-Game"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GS="*res://Global.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
