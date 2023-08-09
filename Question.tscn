@@ -170,6 +170,23 @@ margin_bottom = 58.0
 rect_scale = Vector2( 1.23644, 1.40269 )
 text = "Answer:"
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 41.0
+margin_top = 377.0
+margin_right = 375.0
+margin_bottom = 432.0
+min_value = 1.0
+max_value = 7.0
+step = 1.0
+value = 1.0
+percent_visible = false
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 44.0
+margin_top = 453.0
+margin_right = 369.0
+margin_bottom = 502.0
+
 [connection signal="pressed" from="Next Q" to="." method="_on_Next_Q_pressed"]
 [connection signal="pressed" from="Submit" to="." method="_on_Submit_pressed"]
 [connection signal="pressed" from="Prev Q" to="." method="_on_Prev_Q_pressed"]

@@ -97,6 +97,12 @@ func _loadquestion(value):
 	var MaxQString = str(q_data.size())
 	var QNString = str(n+1)
 	
+	var PB = get_node("ProgressBar")
+	PB.min_value = 0
+	PB.max_value = q_data.size()
+	PB.step = 1
+	PB.value = n+1
+	
 	QN.set("text",QNString + "/" + MaxQString)
 	
 	var QT = get_node("QuestionText")
