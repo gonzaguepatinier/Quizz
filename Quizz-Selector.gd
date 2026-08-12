@@ -22,10 +22,10 @@ func _ready():
 	
 	var new_button = TextureButton.new()
 	add_child(new_button)
-	new_button.rect_size = Vector2(100, 30)
-	new_button.rect_global_position = Vector2(80, 80)
+	new_button.size = Vector2(100, 30)
+	new_button.global_position = Vector2(80, 80)
 	new_button.texture_normal = load("res://icon-button.png")
-	new_button.connect("pressed", self, "button_pressed")
+	new_button.connect("pressed", Callable(self, "button_pressed"))
 	print("enter scene")
 	pass # Replace with function body.
 

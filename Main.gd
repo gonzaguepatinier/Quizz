@@ -1,7 +1,7 @@
 extends Node2D
 
 var global_script = preload("res://Global.gd")
-onready var my_node = get_node("VBoxContainer/Start")
+@onready var my_node = get_node("VBoxContainer/Start")
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -21,7 +21,7 @@ func _ready():
 func _on_Start_pressed():
 	
 	# GS.quizz_file = 
-	get_tree().change_scene("res://Question.tscn")
+	get_tree().change_scene_to_file("res://Question.tscn")
 	
 
 

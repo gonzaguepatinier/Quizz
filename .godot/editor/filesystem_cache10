@@ -1,0 +1,28 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1786541373
+Arial Unicode.ttf::FontFile::6288955726866095473::1786539397::1786541374::1::::<><><>0<>0<>f385daf1c6930302b44bedabd4fc1976<>res://.godot/imported/Arial Unicode.ttf-b846939bcf3e6a66ff8d5ebac02daa42.fontdata::
+default_env.tres::Environment::-1::1786541100::0::1::::<><><>0<>0<><>::
+DEVOPS_data.json::JSON::-1::1786539397::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1786539397::0::1::::<><><>0<>0<><>::
+Global.gd::GDScript::3176755122887019729::1786541100::0::1::::<>Node<><>0<>0<><>::
+icon-button.png::CompressedTexture2D::4004464880549418651::1786539397::1786541376::1::::<><><>0<>0<>b8be111dd170fd2ba2754b09d9d829d9<>res://.godot/imported/icon-button.png-c08fd747e67c1e061a479a958dde7e60.ctex::
+index.png::CompressedTexture2D::2805089216805600183::1786539397::1786541374::1::::<><><>0<>0<>1c6526f4db514f69eb3be0114771e892<>res://.godot/imported/index.png-5122033cac747157decad52589e2295c.ctex::
+ITSM_data.json::JSON::-1::1786539397::0::1::::<><><>0<>0<><>::
+Main.gd::GDScript::6623750166304864341::1786541100::0::1::::<>Node2D<><>0<>0<><>::
+Main.tscn::PackedScene::-1::1786541100::0::1::::<><><>0<>0<><>::res://Main.gd<>res://Quiz-Background.jpg
+NewMain.tscn::PackedScene::-1::1786541100::0::1::::<><><>0<>0<><>::res://Quiz-Background.jpg<>res://Arial Unicode.ttf
+new_styleboxflat.tres::StyleBoxFlat::-1::1786541100::0::1::::<><><>0<>0<><>::
+old_user_data.json::JSON::-1::1786539397::0::1::::<><><>0<>0<><>::
+Question.gd::GDScript::6704628085130297930::1786541100::0::1::::<>Node2D<><>0<>0<><>::
+question.json::JSON::-1::1786539397::0::1::::<><><>0<>0<><>::
+Question.tscn::PackedScene::-1::1786541100::0::1::::<><><>0<>0<><>::res://Question.gd<>res://Quiz-Background.jpg
+Quiz-Background.jpg::CompressedTexture2D::535118224728409467::1786539397::1786541375::1::::<><><>0<>0<>fe1726ad576f5dd75744c8444d67a3f2<>res://.godot/imported/Quiz-Background.jpg-6ea0c1ea4f61256da5bc81aee94a05ba.ctex::
+Quizz-Selector.gd::GDScript::6590465045958044900::1786541100::0::1::::<>Node2D<><>0<>0<><>::
+Quizz-Selector.tscn::PackedScene::-1::1786541100::0::1::::<><><>0<>0<><>::res://Quizz-Selector.gd
+README.md::TextFile::-1::1786539397::0::1::::<><><>0<>0<><>::
+Score.gd::GDScript::443697488278699414::1786541100::0::1::::<>Node2D<><>0<>0<><>::
+Score.tscn::PackedScene::-1::1786541100::0::1::::<><><>0<>0<><>::res://Score.gd<>res://Quiz-Background.jpg
+Testing_data.json::JSON::-1::1786539397::0::1::::<><><>0<>0<><>::
+::res://docs/::1786539397
+index.md::TextFile::-1::1786539397::0::1::::<><><>0<>0<><>::
+Readme.md::TextFile::-1::1786539397::0::1::::<><><>0<>0<><>::
